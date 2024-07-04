@@ -121,7 +121,7 @@ def plot_ps_pulse(file,slice,sample=1,z=(0,-1,1),bunching=False):
             plt.pause(0.1)
             if zz+zjump>=zend:
                 plt.ioff()
-    elif type(z)==int and z<=zmax: # snap
+    elif (type(z)==int or type(z)==float) and z<=zmax: # snap
         if z>=0:
             zz=int(np.round(z*zsteps/zmax))
         elif z==-1:
@@ -238,7 +238,7 @@ def plot_avgeta_pulse(file,slice=-1,z=(0,-1,1)):
             plt.pause(0.1)
             if zz+zjump>=zend:
                 plt.ioff()
-    elif type(z)==int and z<=zmax: # snap
+    elif (type(z)==int or type(z)==float) and z<=zmax: # snap
         if z>=0:
             zz=int(np.round(z*zsteps/zmax))
         elif z==-1:
