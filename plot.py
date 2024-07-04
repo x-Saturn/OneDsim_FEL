@@ -206,6 +206,7 @@ def plot_avgeta_pulse(file,slice=-1,z=(0,-1,1)):
         raise ValueError("!!! Invalid type of slice or out of range !!!")
     avg_eta=np.array(avg_eta)
     f.close()
+    zmax=delz*zsteps
     if type(z)==tuple or type(z)==list: # anim
         zstart,zend,zjump=z
         if zend==-1:
